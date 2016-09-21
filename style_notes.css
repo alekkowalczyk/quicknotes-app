@@ -1,0 +1,234 @@
+
+.note-status
+{
+    color: #a4a2af;
+    font-size: 0.85em;
+    position: absolute;
+    height: 1em;
+    right: 0;
+}
+
+.note-edit-content
+{
+    transition: margin-top 0.1s ease;
+    margin-top:    1.5em;
+}
+
+.note-menu
+{
+    margin-bottom: .35em;
+    position: absolute;
+    z-index: 997;
+    right:0em;
+}
+
+.note-menu-item {
+
+    color: #999;
+    cursor: pointer;
+    background: white;
+    border-top: solid 1px #E5E2DE;
+    border-left: solid 1px #E5E2DE;
+    border-bottom: solid 1px #E5E2DE;
+    padding: .2em .6em .2em .6em;
+
+    margin-top: .35em;
+    margin-right: -1px;
+    border-bottom-left-radius: .2em;
+    border-top-left-radius: .2em;
+
+    opacity: .4;
+
+    font-size: 1em;
+    position: relative;
+}
+
+
+.note-menu-item:hover {
+    color: #7C9BFF !important;
+    border-top: solid 1px #7C9BFF !important;
+    border-left: solid 1px #7C9BFF !important;
+    border-bottom: solid 1px #7C9BFF !important;
+    opacity: 1;
+}
+
+.delete:hover
+{
+    color: #ff9487 !important;
+    border-top: solid 1px #ff9487 !important;
+    border-left: solid 1px #ff9487 !important;
+    border-bottom: solid 1px #ff9487 !important;
+}
+
+.note-edit-menu
+{
+    margin-left: .35em;
+    width:100%;
+    position: absolute;
+    z-index: 997;
+    opacity: 0.5;
+    top: 0;
+}
+
+.note-edit-menu:hover
+{
+    opacity: 0.9;
+}
+
+.note-edit-menu-item-group
+{
+    display: inline-block;
+    margin-right: 0.7em;
+}
+
+.note-edit-menu-item-group-right
+{
+    display: inline-block;
+    margin-right: 0.45em;
+    position: absolute;
+    right: 0.2em;
+}
+
+.note-edit-menu-item {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    background: #5691FF;
+    border-right: solid 1px #A5A2AE;
+    border-left: solid 1px #A5A2AE;
+    border-bottom: solid 1px #A5A2AE;
+    padding: .3em .7em .3em .5em;
+
+    margin-left: .35em;
+    margin-top: -1px;
+
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
+
+    width: .7em;
+    font-size: 1em;
+    position: relative;
+
+    -webkit-box-shadow: 1px 1px 8px -2px rgba(214,214,214,1);
+    -moz-box-shadow: 1px 1px 8px -2px rgba(214,214,214,1);
+    box-shadow: 1px 1px 8px -2px rgba(214,214,214,1);
+}
+
+.note-edit-menu-item:hover {
+    background: #1466FF;
+}
+
+.note-edit-menu-item-save-up
+{
+    background-color: #37bf8f;
+    /*position: absolute;*/
+    /*right: 0.7em;*/
+}
+
+.note-edit-menu-item-up
+{
+    position: absolute;
+    top: 0.25em;
+    left: 0.2em;
+}
+
+
+.note-edit-menu-item-save-up:hover
+{
+    background-color: #479b86;
+}
+
+.note-edit-menu-item-save
+{
+    background-color: #07bf00;
+    /*position: absolute;*/
+    /*right: 3.1em;*/
+}
+
+.note-edit-menu-item-save:hover
+{
+    background-color: #339b38;
+}
+
+.note-edit-menu-item-delete
+{
+    background-color: #d53129;
+    /*position: absolute;*/
+    /*right: 5.5em;*/
+}
+
+.note-edit-menu-item-delete:hover
+{
+    background-color: #961d1a;
+}
+
+
+.note
+{
+    position: relative;
+    border: solid 1px #E5E2DE;
+    border-radius: 0.2em;
+    background: #fefefb;
+    margin: 0.3em;
+    width: 40em;
+    min-height: 4.8em;
+    /*-webkit-box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);*/
+    /*-moz-box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);*/
+    /*box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);*/
+}
+
+
+
+.note-read-only
+{
+}
+
+.note-edit
+{
+    background: white;
+    border: solid 1px #A5A2AE;
+    margin: 0.3em 0.3em 1em 0.3em;
+    -webkit-box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);
+    -moz-box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);
+    box-shadow: 2px 2px 8px -2px rgba(214,214,214,1);
+}
+
+/*overriding markdown*/
+.note-content
+{
+    display: block;
+    padding: 0.3em 0.6em;
+    word-wrap: break-word;
+}
+
+.note-content h1
+{
+    font-size: 1.7em;
+}
+
+.note-content h2
+{
+    font-size: 1.4em;
+}
+
+@media (max-width: 640px) {
+    /* Smaller view stuff goes here. */
+    .note
+    {
+        width:100% !important;
+        margin-bottom: 0.3em;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .note-edit
+    {
+        background: white;
+        border: solid 1px #A5A2AE;
+        margin-bottom: 0.9em;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
