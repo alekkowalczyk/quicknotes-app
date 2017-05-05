@@ -16,7 +16,7 @@ export default React.createClass({
             statusText: "",
             saveInSeconds : -1
         };
-    },
+    },  
     isTimerRunning : false, //used for autosave
     lastTextChangeTime : undefined, // used for autosave
     orginialText: undefined, // we set it on simpleMde init
