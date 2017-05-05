@@ -1,3 +1,6 @@
+const ReactDnD = require('react-dnd');
+const React_Addons_Update = require('react-addons-update');
+ReactDnD_HTML5Backend = require('react-dnd-html5-backend');
 import TagItem from './TagManagerItem';
 
 const {  DropTarget, DragDropContext } = ReactDnD;
@@ -8,13 +11,13 @@ const tagTarget = {
     }
 };
 
-@DragDropContext(ReactDnD_HTML5Backend)
-@DropTarget("tag", tagTarget, connect => ({
-    connectDropTarget: connect.dropTarget()
-}))
+// @DragDropContext(ReactDnD_HTML5Backend)
+// @DropTarget("tag", tagTarget, connect => ({
+//     connectDropTarget: connect.dropTarget()
+// }))
 
 
-export default class TagManagerModal extends React.Component {
+class TagManagerModal extends React.Component {
 
     constructor(props)
     {
@@ -221,3 +224,9 @@ TagManagerModal.propTypes = {
     isOpen: React.PropTypes.bool.isRequired,
     closeModal: React.PropTypes.func.isRequired
 };
+
+export default DragDropContext(ReactDnD_HTML5Backend)(
+    DropTarget("tag", tagTarget, connect => ({
+        connectDropTarget: connect.dropTarget()
+    }))(TagManagerModal)
+)

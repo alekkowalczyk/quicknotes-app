@@ -1,5 +1,7 @@
 import Note from './Note';
 import Settings from '../../lib/Settings';
+console.log("BABABA", React);
+const Masonry = require('react-masonry-component');
 
 export default React.createClass({
     componentDidMount(){

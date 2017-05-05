@@ -1,0 +1,49 @@
+{
+  "name": "quicknotes-app",
+  "version": "1.0.0",
+  "description": "http://quicknot.es/",
+  "main": "main.js",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "desandro-get-style-property": "^1.0.4",
+    "desandro-matches-selector": "^2.0.2",
+    "doc-ready": "^1.0.4",
+    "eventie": "^1.0.6",
+    "externalify": "0.1.0",
+    "fizzy-ui-utils": "^2.0.5",
+    "get-size": "^2.0.2",
+    "jquery": "^3.2.1",
+    "meteor-node-stubs": "^0.2.6",
+    "outlayer": "^2.1.0",
+    "react": "^15.5.4",
+    "react-addons-create-fragment": "^15.5.3",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-linked-state-mixin": "^15.5.2",
+    "react-addons-perf": "^15.4.2",
+    "react-addons-pure-render-mixin": "^15.5.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-addons-transition-group": "^15.5.2",
+    "react-addons-update": "0.14.3",
+    "react-dnd": "2.0.2",
+    "react-dnd-html5-backend": "1.0.0",
+    "react-dom": "^15.5.4",
+    "react-masonry-component": "^5.0.5",
+    "react-remarkable": "1.1.1",
+    "wolfy87-eventemitter": "^5.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekkowalczyk/quicknotes-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekkowalczyk/quicknotes-app/issues"
+  },
+  "homepage": "https://github.com/alekkowalczyk/quicknotes-app#readme"
+}

@@ -1,6 +1,8 @@
 // Note component - represents a single note
 //import ReactMarkdownMediumEditor from '{universe:react-markdown-wysiwyg}/ReactMarkdownMediumEditor';
 //import mediumEditor from '{universe:react-markdown-wysiwyg}/editor/medium-editor';
+const Markdown = require('react-remarkable');
+
 var MAX_NOTE_LENGTH = 7000; //Is defined also in client/components/Note.import.jsx
 export default React.createClass({
     propTypes: {

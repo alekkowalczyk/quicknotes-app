@@ -1,3 +1,4 @@
+const ReactDnD = require('react-dnd');
 let {  DropTarget, DragSource } = ReactDnD;
 
 const tagSource = {
@@ -37,16 +38,16 @@ const tagTarget = {
     }
 };
 
-@DropTarget("tag", tagTarget, connect => ({
-    connectDropTarget: connect.dropTarget()
-}))
-@DragSource("tag", tagSource, (connect, monitor) => ({
-    connectDragSource: connect.dragSource(),
-    connectDragPreview: connect.dragPreview(),
-    isDragging: monitor.isDragging()
-}))
+// @DropTarget("tag", tagTarget, connect => ({
+//     connectDropTarget: connect.dropTarget()
+// }))
+// @DragSource("tag", tagSource, (connect, monitor) => ({
+//     connectDragSource: connect.dragSource(),
+//     connectDragPreview: connect.dragPreview(),
+//     isDragging: monitor.isDragging()
+// }))
 
-export default class TagManagerItem extends React.Component {
+class TagManagerItem extends React.Component {
 
     render() {
         const { tag, setCurrentTag, deleteTag } = this.props;
@@ -72,3 +73,13 @@ TagManagerItem.propTypes = {
     deleteTag: React.PropTypes.func.isRequired,
     tag: React.PropTypes.object.isRequired
 };
+
+export default DropTarget("tag", tagTarget, connect => ({
+    connectDropTarget: connect.dropTarget()
+}))(
+    DragSource("tag", tagSource, (connect, monitor) => ({
+        connectDragSource: connect.dragSource(),
+        connectDragPreview: connect.dragPreview(),
+        isDragging: monitor.isDragging()
+    }))(TagManagerItem)
+)
