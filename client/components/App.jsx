@@ -173,7 +173,7 @@ export default React.createClass({
     },
     modalManager: null,
     render() {
-        if(!Meteor.userId() && !this.state.isDemoMode)
+        if(!Meteor.userId() && !Meteor.loggingIn() && !this.state.isDemoMode)
             return <LoginPage
                 loginFacebook={this.loginFacebook}
                 loginGoogle={this.loginGoogle}
@@ -199,7 +199,11 @@ export default React.createClass({
                     Meteor.call("menuOpened");
                 }
         };
-
+        let username = "...";
+        if(Meteor.user()) {
+            const { profile } = Meteor.user();
+            username = profile.name;
+        }
         return (
             <div className="container">
                 <header>
@@ -225,7 +229,7 @@ export default React.createClass({
                     <MainMenu getModalManager={() => this.modalManager}
                               isMobile={this.state.isMobile}
                               logout={this.logout}
-                              username={this.state.isDemoMode ? "Demo Mode" : Meteor.user().profile.name}
+                              username={this.state.isDemoMode ? "Demo Mode" : username}
                               Clicked={mainMenuClicked} />
                     { !this.data.userdata.menuOpened && !this.state.isMobile && <span className="first-tips-top-right" style={{float: "right"}}>Menu&nbsp;<i className="fa fa-arrow-right"></i></span>}
 
